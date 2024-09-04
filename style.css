@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 800px;
+  background-color: rgba(33, 70, 83, 0.831);
+  color: white;
+  padding: 40px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.container > p {
+  margin-bottom: 45px;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 9.5px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
+
+.card :where(.one, .two) {
+  display: inline-block;
+  background-color: rgb(253, 249, 249);
+  color: rgb(48, 48, 48);
+  padding: 30px;
+  border-radius: 7px;
+}
+
+.one {
+  width: 330px;
+  box-shadow: 0 0 20px 2px rgba(33, 70, 83, 0.356);
+  z-index: 1;
+}
+
+.two {
+  margin-left: -10px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: rgb(220, 220, 220);
+}
+
+.price {
+  display: inline-block;
+  margin: 10px 0 ;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(19, 77, 96);
+}
+
+:where(.one, .two) button {
+  border: none;
+  margin-left: 70px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.one button {
+  background-color: rgb(219, 18, 0);
+}
+
+.two button {
+  background-color: rgb(0, 161, 219);
+}
+
+:where(.one, .two) h2 {
+  position: relative;
+  color: rgb(19, 77, 96);
+}
+
+.one h2::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 40px;
+  width: 77%;
+  height: 7px;
+  background-color: rgba(219, 18, 0, 0.336);
+}
+
+.two h2::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 40px;
+  width: 85%;
+  height: 7px;
+  background-color: rgba(0, 161, 219, 0.336);
+}
